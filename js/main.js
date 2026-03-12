@@ -125,6 +125,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ---- Scroll Reveal (fade-in sections on scroll) ----
+  var reveals = document.querySelectorAll('.reveal');
+  if (reveals.length > 0) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(function (el) { observer.observe(el); });
+  }
+
   // ---- Leaflet Map ----
   var mapEl = document.getElementById('map');
   if (mapEl && typeof L !== 'undefined') {
@@ -135,19 +150,64 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var map = L.map('map', {
       scrollWheelZoom: false
-    }).setView([lat, lng], 15);
+    }).setView([lat, lng], 14);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors',
       maxZoom: 19
     }).addTo(map);
 
-    var marker = L.marker([lat, lng]).addTo(map);
-    marker.bindPopup(
-      '<strong>Condominio Florencia</strong><br>' +
-      'Av. Rosita Pochi<br>' +
-      'Entre Av. Piraí y Av. Hilandería<br>' +
-      'Entre 4to y 5to Anillo'
-    ).openPopup();
+    // Custom marker icons
+    var goldIcon = L.divIcon({
+      className: 'map-pin map-pin--main',
+      html: '<div style="background:#C9A96E;width:14px;height:14px;border-radius:50%;border:3px solid #3B2314;box-shadow:0 2px 6px rgba(0,0,0,0.4);"></div>',
+      iconSize: [20, 20],
+      iconAnchor: [10, 10]
+    });
+
+    var brownIcon = L.divIcon({
+      className: 'map-pin map-pin--poi',
+      html: '<div style="background:#6B4226;width:10px;height:10px;border-radius:50%;border:2px solid #C9A96E;box-shadow:0 2px 4px rgba(0,0,0,0.3);"></div>',
+      iconSize: [14, 14],
+      iconAnchor: [7, 7]
+    });
+
+    // Condominio Florencia (main)
+    L.marker([lat, lng], { icon: goldIcon }).addTo(map)
+      .bindPopup(
+        '<strong>Condominio Florencia</strong><br>' +
+        'Av. Rosita Pochi<br>' +
+        'Entre Av. Piraí y Av. Hilandería<br>' +
+        'Entre 4to y 5to Anillo'
+      ).openPopup();
+
+    // Points of interest
+    var pois = [
+      {
+        coords: [-17.778, -63.196],
+        name: 'Country Club Las Palmas',
+        desc: 'Golf 18 hoyos, restaurante, piscina'
+      },
+      {
+        coords: [-17.7647, -63.1767],
+        name: 'La Boulangerie',
+        desc: 'Panadería artesanal — Av. Ibérica, Las Palmas'
+      },
+      {
+        coords: [-17.7634, -63.1971],
+        name: 'Panessa Gourmet',
+        desc: 'Café y panadería — Av. Marcelo Terceros Banzer'
+      }
+    ];
+
+    pois.forEach(function (poi) {
+      L.marker(poi.coords, { icon: brownIcon }).addTo(map)
+        .bindPopup('<strong>' + poi.name + '</strong><br>' + poi.desc);
+    });
+
+    // Fit map to show all markers
+    var allCoords = [[lat, lng]].concat(pois.map(function (p) { return p.coords; }));
+    var bounds = L.latLngBounds(allCoords);
+    map.fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
   }
 });
