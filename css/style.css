@@ -430,6 +430,83 @@ ul { list-style: none; }
   margin-bottom: 0.75rem;
 }
 
+/* ---- Neighborhood ---- */
+.neighborhood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.neighborhood-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+a.neighborhood-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59, 35, 20, 0.15);
+}
+
+.neighborhood-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--brown) 0%, #5a3219 100%);
+  color: var(--white);
+}
+
+.neighborhood-featured h3 {
+  color: var(--gold);
+}
+
+.neighborhood-featured p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.neighborhood-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 0.15rem;
+}
+
+.neighborhood-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--brown);
+  margin-bottom: 0.35rem;
+}
+
+.neighborhood-card p {
+  font-size: 0.9rem;
+  color: var(--brown-light);
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+}
+
+.neighborhood-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+.neighborhood-featured .neighborhood-link {
+  color: var(--gold-light);
+}
+
+@media (max-width: 600px) {
+  .neighborhood-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---- Gallery ---- */
 .gallery-filter {
   display: flex;
