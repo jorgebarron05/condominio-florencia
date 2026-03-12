@@ -5,18 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto — Condominio Florencia | Santa Cruz, Bolivia</title>
   <meta name="description" content="Contáctenos para información sobre venta y alquiler de departamentos en Condominio Florencia, Santa Cruz de la Sierra, Bolivia.">
-  <link rel="icon" type="image/png" href="326347543_494204662660840_5737860985579006407_n.jpg">
+  <link rel="icon" type="image/jpeg" href="img/logo-florencia.jpg">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Leaflet (free map) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Site styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Splash Screen -->
+  <!-- ============ Splash Screen ============ -->
   <div id="splash" class="splash">
-    <svg class="splash-lotus" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <svg class="splash-lotus" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Flor de Loto — Logo de Condominio Florencia">
       <g fill="none" stroke="#C9A96E" stroke-width="1.5">
         <path d="M60 20 C55 45, 45 55, 60 75 C75 55, 65 45, 60 20Z" fill="#C9A96E" opacity="0.9"/>
         <path d="M42 30 C40 50, 35 60, 55 72 C50 55, 45 40, 42 30Z" fill="#C9A96E" opacity="0.7"/>
@@ -32,40 +38,42 @@
     <div class="splash-sub">— Condominio —</div>
   </div>
 
-  <!-- Header -->
+  <!-- ============ Header ============ -->
   <header class="header">
     <nav class="nav container">
       <a href="index.html" class="nav-logo">
-        <img src="326347543_494204662660840_5737860985579006407_n.jpg" alt="Condominio Florencia Logo">
+        <img src="img/logo-florencia.jpg" alt="Condominio Florencia — Logo" width="50" height="50">
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="galeria.html">Galería</a></li>
         <li><a href="contacto.html" class="active">Contacto</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- ============ Hero ============ -->
   <section class="hero" style="min-height: 30vh;">
-    <img class="hero-img" src="466380789_9013896445298971_4328869367796276682_n.jpg" alt="Interior elegante">
+    <img class="hero-img" src="img/living-vista-panoramica.jpg" alt="Interior elegante de Condominio Florencia">
     <div class="hero-overlay">
       <h1>Contáctenos</h1>
       <p>Venta y alquiler de departamentos</p>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- ============ Contact Section ============ -->
   <section class="section">
     <div class="container">
       <div class="contact-grid">
+
         <!-- Contact Info -->
         <div class="contact-info">
           <div class="placeholder-note">
-            ⚠️ <strong>Nota:</strong> Los datos de contacto a continuación son placeholders. Reemplace con su información real editando este archivo.
+            <strong>Nota:</strong> Los datos de contacto son placeholders.
+            Reemplace con su información real editando contacto.html.
           </div>
 
           <h3>Información de Contacto</h3>
@@ -74,6 +82,7 @@
             <span class="icon">📞</span>
             <div>
               <h4>Teléfono</h4>
+              <!-- TODO: Reemplazar con número real -->
               <p>+591 XXX-XXXXX</p>
             </div>
           </div>
@@ -82,6 +91,7 @@
             <span class="icon">💬</span>
             <div>
               <h4>WhatsApp</h4>
+              <!-- TODO: Reemplazar con número real -->
               <p>+591 XXX-XXXXX</p>
             </div>
           </div>
@@ -90,6 +100,7 @@
             <span class="icon">✉️</span>
             <div>
               <h4>Email</h4>
+              <!-- TODO: Reemplazar con email real -->
               <p>contacto@ejemplo.com</p>
             </div>
           </div>
@@ -98,9 +109,11 @@
             <span class="icon">📍</span>
             <div>
               <h4>Dirección</h4>
-              <p>Av. Rosita Pochi, entre Av. Piraí y Av. Hilandería<br>
-              Entre 4to y 5to Anillo<br>
-              Santa Cruz de la Sierra, Bolivia</p>
+              <p>
+                Av. Rosita Pochi, entre Av. Piraí y Av. Hilandería<br>
+                Entre 4to y 5to Anillo<br>
+                Santa Cruz de la Sierra, Bolivia
+              </p>
             </div>
           </div>
 
@@ -119,28 +132,32 @@
           <div style="margin-top: 1rem; background: var(--white); border-radius: 8px; padding: 1.25rem; box-shadow: 0 2px 12px rgba(59,35,20,0.12);">
             <h3 style="font-family: 'Playfair Display', serif; color: #6B4226; margin-bottom: 0.5rem;">Cómo Llegar</h3>
             <p style="font-size: 0.9rem; color: #8B6240;">
-              Desde el centro de la ciudad, tome la Av. Piraí hacia el oeste. Al llegar entre el 4to y 5to anillo, gire en Av. Rosita Pochi. Condominio Florencia se encuentra a mano derecha, entre Av. Piraí y Av. Hilandería.
+              Desde el centro de la ciudad, tome la Av. Piraí hacia el oeste.
+              Al llegar entre el 4to y 5to anillo, gire en Av. Rosita Pochi.
+              Condominio Florencia se encuentra a mano derecha, entre
+              Av. Piraí y Av. Hilandería.
               <br><br>
               <strong>A solo 15 minutos del centro, rodeado de naturaleza.</strong>
             </p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CTA Banner -->
+  <!-- ============ CTA Banner ============ -->
   <section class="price-banner">
     <h2>Venta y Alquiler</h2>
     <p>Departamentos con 3 dormitorios, piscina, y todas las comodidades</p>
     <a href="galeria.html" class="btn btn-primary">Ver Galería</a>
   </section>
 
-  <!-- Footer -->
+  <!-- ============ Footer ============ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-logo">
-        <img src="326347543_494204662660840_5737860985579006407_n.jpg" alt="Condominio Florencia">
+        <img src="img/logo-florencia.jpg" alt="Condominio Florencia — Logo" width="60" height="60">
       </div>
       <p style="margin-bottom: 0.5rem; color: var(--gold-light);">Flor de Loto — Símbolo de pureza, renacimiento y elegancia</p>
       <ul class="footer-links">
@@ -152,6 +169,7 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
 </body>

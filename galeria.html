@@ -5,17 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galería — Condominio Florencia | Santa Cruz, Bolivia</title>
   <meta name="description" content="Galería de fotos de Condominio Florencia — departamentos, piscina, áreas comunes en Santa Cruz de la Sierra, Bolivia.">
-  <link rel="icon" type="image/png" href="326347543_494204662660840_5737860985579006407_n.jpg">
+  <link rel="icon" type="image/jpeg" href="img/logo-florencia.jpg">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Site styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Splash Screen -->
+  <!-- ============ Splash Screen ============ -->
   <div id="splash" class="splash">
-    <svg class="splash-lotus" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <svg class="splash-lotus" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Flor de Loto — Logo de Condominio Florencia">
       <g fill="none" stroke="#C9A96E" stroke-width="1.5">
         <path d="M60 20 C55 45, 45 55, 60 75 C75 55, 65 45, 60 20Z" fill="#C9A96E" opacity="0.9"/>
         <path d="M42 30 C40 50, 35 60, 55 72 C50 55, 45 40, 42 30Z" fill="#C9A96E" opacity="0.7"/>
@@ -31,36 +35,36 @@
     <div class="splash-sub">— Condominio —</div>
   </div>
 
-  <!-- Header -->
+  <!-- ============ Header ============ -->
   <header class="header">
     <nav class="nav container">
       <a href="index.html" class="nav-logo">
-        <img src="326347543_494204662660840_5737860985579006407_n.jpg" alt="Condominio Florencia Logo">
+        <img src="img/logo-florencia.jpg" alt="Condominio Florencia — Logo" width="50" height="50">
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="galeria.html" class="active">Galería</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
 
-  <!-- Gallery Hero -->
+  <!-- ============ Gallery Hero ============ -->
   <section class="hero" style="min-height: 30vh;">
-    <img class="hero-img" src="465725675_9024829454205670_7329402227910826711_n.jpg" alt="Vista desde el balcón">
+    <img class="hero-img" src="img/balcon-vista-frase.jpg" alt="Vista desde el balcón de Condominio Florencia">
     <div class="hero-overlay">
       <h1>Galería de Fotos</h1>
       <p>Conoce cada rincón de Condominio Florencia</p>
     </div>
   </section>
 
-  <!-- Gallery -->
+  <!-- ============ Gallery ============ -->
   <section class="section">
     <div class="container">
-      <!-- Filter Buttons -->
+      <!-- Filter -->
       <div class="gallery-filter">
         <button class="active" data-filter="todos">Todos</button>
         <button data-filter="sala">Sala</button>
@@ -69,79 +73,79 @@
         <button data-filter="exterior">Exteriores</button>
       </div>
 
-      <!-- Gallery Grid -->
+      <!-- Grid -->
       <div class="gallery-grid">
-        <!-- Living / Sala -->
+        <!-- Sala / Living -->
         <div class="gallery-item" data-category="sala">
-          <img src="466380789_9013896445298971_4328869367796276682_n.jpg" alt="Living con balcón y vista">
+          <img src="img/living-vista-panoramica.jpg" alt="Living amplio con vista panorámica de Santa Cruz" loading="lazy">
           <span class="gallery-label">Living con Vista</span>
         </div>
         <div class="gallery-item" data-category="sala">
-          <img src="466398954_9013896698632279_8570734586659309641_n.jpg" alt="Sala de estar nocturna">
+          <img src="img/sala-estar-nocturna.jpg" alt="Sala de estar con iluminación nocturna" loading="lazy">
           <span class="gallery-label">Sala de Estar</span>
         </div>
         <div class="gallery-item" data-category="sala">
-          <img src="60768287_2388566241165391_2438672092682518528_n.jpg" alt="Living-comedor amplio">
+          <img src="img/living-comedor.jpg" alt="Living-comedor con balcón y decoración moderna" loading="lazy">
           <span class="gallery-label">Living-Comedor</span>
         </div>
         <div class="gallery-item" data-category="sala">
-          <img src="60787441_2388565731165442_9193982932857913344_n.jpg" alt="Sala familiar">
+          <img src="img/sala-familiar.jpg" alt="Sala familiar con sofá cama y TV" loading="lazy">
           <span class="gallery-label">Sala Familiar</span>
         </div>
         <div class="gallery-item" data-category="sala">
-          <img src="60738538_2388578641164151_1615680556891111424_n.jpg" alt="Entrada y área de TV">
+          <img src="img/entrada-tv.jpg" alt="Área de entrada con escritorio y TV" loading="lazy">
           <span class="gallery-label">Entrada</span>
+        </div>
+        <div class="gallery-item" data-category="sala">
+          <img src="img/balcon-living-decorado.jpg" alt="Balcón con muebles y vista a las colinas" loading="lazy">
+          <span class="gallery-label">Balcón Living</span>
         </div>
 
         <!-- Cocina -->
         <div class="gallery-item" data-category="cocina">
-          <img src="60701380_2388578461164169_6039419485050372096_n.jpg" alt="Cocina con muebles de madera">
+          <img src="img/cocina.jpg" alt="Cocina con muebles de madera y mesón de granito" loading="lazy">
           <span class="gallery-label">Cocina</span>
         </div>
 
         <!-- Dormitorios -->
         <div class="gallery-item" data-category="dormitorio">
-          <img src="61039705_2388564884498860_8147497834606755840_n.jpg" alt="Dormitorio principal en suite">
+          <img src="img/dormitorio-principal.jpg" alt="Dormitorio principal con en suite y aire acondicionado" loading="lazy">
           <span class="gallery-label">Dormitorio Principal</span>
         </div>
         <div class="gallery-item" data-category="dormitorio">
-          <img src="61270768_2388568561165159_384861037163184128_n.jpg" alt="Segundo dormitorio">
+          <img src="img/dormitorio-segundo.jpg" alt="Segundo dormitorio con decoración vintage" loading="lazy">
           <span class="gallery-label">Segundo Dormitorio</span>
         </div>
         <div class="gallery-item" data-category="dormitorio">
-          <img src="61029188_2388565987832083_20618424296144896_n.jpg" alt="Dormitorio infantil">
+          <img src="img/dormitorio-infantil.jpg" alt="Dormitorio infantil con muebles blancos y pizarra" loading="lazy">
           <span class="gallery-label">Dormitorio Infantil</span>
         </div>
 
         <!-- Exteriores / Amenidades -->
         <div class="gallery-item" data-category="exterior">
-          <img src="60786542_2388568981165117_4374743611988770816_n.jpg" alt="Piscina y churrasquera">
+          <img src="img/piscina.jpg" alt="Piscina al aire libre con área de churrasquera" loading="lazy">
           <span class="gallery-label">Piscina</span>
         </div>
         <div class="gallery-item" data-category="exterior">
-          <img src="465725675_9024829454205670_7329402227910826711_n.jpg" alt="Balcón con vista de Santa Cruz">
+          <img src="img/balcon-vista-frase.jpg" alt="Vista panorámica desde el balcón hacia Santa Cruz" loading="lazy">
           <span class="gallery-label">Vista desde Balcón</span>
-        </div>
-        <div class="gallery-item" data-category="exterior">
-          <img src="466377477_9027876727234276_639923660453118231_n.jpg" alt="Balcón con living decorado">
-          <span class="gallery-label">Balcón Living</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- ============ CTA ============ -->
   <section class="price-banner">
     <h2>¿Te Interesa?</h2>
     <p>Departamentos disponibles para venta y alquiler</p>
     <a href="contacto.html" class="btn btn-primary">Contáctenos</a>
   </section>
 
-  <!-- Footer -->
+  <!-- ============ Footer ============ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-logo">
-        <img src="326347543_494204662660840_5737860985579006407_n.jpg" alt="Condominio Florencia">
+        <img src="img/logo-florencia.jpg" alt="Condominio Florencia — Logo" width="60" height="60">
       </div>
       <p style="margin-bottom: 0.5rem; color: var(--gold-light);">Flor de Loto — Símbolo de pureza, renacimiento y elegancia</p>
       <ul class="footer-links">
@@ -153,14 +157,15 @@
     </div>
   </footer>
 
-  <!-- Lightbox -->
+  <!-- ============ Lightbox ============ -->
   <div id="lightbox" class="lightbox">
-    <button class="lightbox-close" aria-label="Cerrar">&times;</button>
-    <button class="lightbox-prev" aria-label="Anterior">&#8249;</button>
-    <img src="" alt="Vista ampliada">
-    <button class="lightbox-next" aria-label="Siguiente">&#8250;</button>
+    <button class="lightbox-close" aria-label="Cerrar vista ampliada">&times;</button>
+    <button class="lightbox-prev" aria-label="Foto anterior">&#8249;</button>
+    <img src="" alt="Foto ampliada de Condominio Florencia">
+    <button class="lightbox-next" aria-label="Foto siguiente">&#8250;</button>
   </div>
 
+  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>
