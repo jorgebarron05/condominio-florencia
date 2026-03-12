@@ -3,17 +3,27 @@
    Mobile nav, gallery lightbox, Leaflet map
    ============================================ */
 
-// ---- Splash Screen ----
+// ---- Splash Screen (only on first visit per session) ----
 (function () {
   var splash = document.getElementById('splash');
-  if (splash) {
-    setTimeout(function () {
-      splash.classList.add('fade-out');
-    }, 1800);
-    setTimeout(function () {
-      splash.remove();
-    }, 2400);
+  if (!splash) return;
+
+  if (sessionStorage.getItem('splashSeen')) {
+    // Already seen this session — remove immediately, no animation
+    splash.remove();
+    return;
   }
+
+  // First visit: play the full animation, then mark as seen
+  sessionStorage.setItem('splashSeen', '1');
+
+  setTimeout(function () {
+    splash.classList.add('fade-out');
+  }, 2600);
+
+  setTimeout(function () {
+    splash.remove();
+  }, 3600);
 })();
 
 // ---- Mobile Nav Toggle ----
