@@ -3,6 +3,23 @@
    Mobile nav, gallery lightbox, Leaflet map
    ============================================ */
 
+// ---- Share Property ----
+function shareProperty() {
+  var shareData = {
+    title: 'Condominio Florencia — Santa Cruz, Bolivia',
+    text: 'Departamentos de 180 m², 3 dormitorios, piscina, desde $120,000 USD. Av. Rosita Pochi, Las Palmas.',
+    url: window.location.href
+  };
+
+  if (navigator.share) {
+    navigator.share(shareData).catch(function () {});
+  } else {
+    // Fallback: share via WhatsApp
+    var waText = encodeURIComponent(shareData.text + ' ' + shareData.url);
+    window.open('https://wa.me/?text=' + waText, '_blank');
+  }
+}
+
 // ---- Splash Screen (only on first visit per session) ----
 (function () {
   var splash = document.getElementById('splash');
@@ -197,6 +214,21 @@ document.addEventListener('DOMContentLoaded', function () {
         coords: [-17.7634, -63.1971],
         name: 'Panessa Gourmet',
         desc: 'Café y panadería — Av. Marcelo Terceros Banzer'
+      },
+      {
+        coords: [-17.790, -63.215],
+        name: 'Hipermaxi',
+        desc: 'Supermercado — 3 min en auto'
+      },
+      {
+        coords: [-17.7925, -63.219],
+        name: 'A Market',
+        desc: 'Supermercado de barrio — 2 min caminando'
+      },
+      {
+        coords: [-17.7928, -63.2185],
+        name: 'Farmacorp',
+        desc: 'Farmacia — 2 min caminando'
       }
     ];
 
